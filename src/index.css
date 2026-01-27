@@ -44,6 +44,73 @@
   --font-cherry-bomb: "Cherry Bomb One", cursive;
   --font-chillax: "Chillax", sans-serif;
   --font-jakarta: "Plus Jakarta Sans", sans-serif;
+
+  /* Base Colors */
+  --color-primary: #fff1f4;
+  --color-primary-40: #ffc2d1;
+  --color-primary-20: #fff1f4;
+  --color-secondary: #97bdf5;
+  --color-tertiary-20: #fff4d2;
+  --color-white: #ffffff;
+  --color-dark: #222222;
+  --color-border: #e4e4e4;
+  --color-text: #4f4f4f;
+  --color-text-placeholder: #939393;
+
+  /* Gradient Colors */
+  --color-gradient-primary-start: #fe86a2;
+  --color-gradient-primary-middle: #fdb1c3;
+  --color-gradient-primary-end: #ff7797;
+
+  --color-gradient-secondary-start: #97bdf5;
+  --color-gradient-secondary-middle: #b9d5ff;
+  --color-gradient-secondary-end: #89d5ff;
+
+  /* Overlay */
+  --color-primary-overlay: #f59bb7;
+
+  /* Badge Colors */
+  --color-badge-red: #fe0f13;
+  --color-badge-red-background: #ffd2d3;
+  --color-badge-green: #409261;
+  --color-badge-green-background: #e9ffef;
+  --color-badge-orange: #ff9428;
+  --color-badge-orange-background: #ffd8b6;
+  --color-badge-blue: #154aff;
+  --color-badge-blue-background: #dee5ff;
+  --color-badge-purple: #ff9428;
+  --color-badge-purple-background: #ebd6ff;
+  --color-badge-gray-dark: #585858;
+  --color-badge-gray-background: #e4e4e4;
+
+  /* Background Image Gradients */
+  --background-image-gradient-primary: linear-gradient(
+    146.14deg,
+    #fe86a2 8.01%,
+    #fdb1c3 56.57%,
+    #fdb1c3 74.39%,
+    #ff7797 100.68%
+  );
+
+  --background-image-gradient-primary-hover: linear-gradient(
+    146.14deg,
+    #ff7797 0%,
+    #ff7797 100%
+  );
+
+  --background-image-gradient-secondary: linear-gradient(
+    146.14deg,
+    #97bdf5 8.01%,
+    #b9d5ff 56.57%,
+    #b9d5ff 74.39%,
+    #89d5ff 100.68%
+  );
+
+  --background-image-gradient-secondary-hover: linear-gradient(
+    146.14deg,
+    #89d5ff 0%,
+    #89d5ff 100%
+  );
 }
 
 /* ===== CHERRY BOMB HEADINGS ===== */
@@ -148,6 +215,48 @@
 
 @utility font-chillax-link-small-mobile {
   @apply font-chillax font-semibold text-[12px] leading-[16px] tracking-[-0.01em];
+}
+
+/* ====BORDER GRADIENT==== */
+@utility border-gradient-primary {
+  --border-g: 2px; /* default thickness */
+
+  position: relative;
+  border-radius: inherit;
+}
+
+.border-gradient-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: var(--border-g);
+  border-radius: inherit;
+  background: linear-gradient(141.23deg, #ffe1e8 -1.96%, #ff7797 95.64%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+@utility border-g-1 {
+  --border-g: 1px;
+}
+@utility border-g-2 {
+  --border-g: 2px;
+}
+@utility border-g-3 {
+  --border-g: 3px;
+}
+@utility border-g-4 {
+  --border-g: 4px;
+}
+@utility border-g-5 {
+  --border-g: 5px;
 }
 
 @layer utilities {
