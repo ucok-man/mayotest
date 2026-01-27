@@ -1,11 +1,11 @@
 // Robux Preorder Page
-import { Link, useNavigate } from "react-router-dom";
-import { StepperProgress } from "../components/robux/StepperProgress";
-import { ButtonGradient } from "../components/common/ButtonGradient";
+import { Link, useNavigate } from "react-router";
 import { BadgeLabel } from "../components/common/BadgeLabel";
+import { ButtonGradient } from "../components/common/ButtonGradient";
 import { InfoCard } from "../components/common/InfoCard";
+import { StepperProgress } from "../components/robux/StepperProgress";
 
-export const RobuxPreorderPage = () => {
+export default function RobuxPreorderPage() {
   const navigate = useNavigate();
 
   const steps = [
@@ -112,4 +112,4 @@ export const RobuxPreorderPage = () => {
       </div>
     </div>
   );
-};
+}

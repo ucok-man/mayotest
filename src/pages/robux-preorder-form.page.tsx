@@ -1,12 +1,12 @@
 // Robux Preorder Form Page - Step 2: Detail Informasi
-import { Link, useNavigate } from "react-router-dom";
-import { StepperProgress } from "../components/robux/StepperProgress";
-import { ButtonGradient } from "../components/common/ButtonGradient";
-import { RobuxSlider } from "../components/common/RobuxSlider";
-import { Modal, ErrorModal } from "../components/common/Modal";
 import { useState } from "react";
+import { Link, useNavigate } from "react-router";
+import { ButtonGradient } from "../components/common/ButtonGradient";
+import { ErrorModal, Modal } from "../components/common/Modal";
+import { RobuxSlider } from "../components/common/RobuxSlider";
+import { StepperProgress } from "../components/robux/StepperProgress";
 
-export const RobuxPreorderFormPage = () => {
+export default function RobuxPreorderFormPage() {
   const navigate = useNavigate();
   const [showEstimasiModal, setShowEstimasiModal] = useState(false);
   const [agreeChecked, setAgreeChecked] = useState(false);
@@ -51,7 +51,7 @@ export const RobuxPreorderFormPage = () => {
     if (!formData.whatsapp.trim()) {
       showError(
         "Jangan lupa Whatsappnya!",
-        "Mohon masukkan Nomor Whatsapp biar gampang dihubungi."
+        "Mohon masukkan Nomor Whatsapp biar gampang dihubungi.",
       );
       return;
     }
@@ -65,7 +65,7 @@ export const RobuxPreorderFormPage = () => {
       setShowEstimasiModal(false);
       showError(
         "Eits, setuju dulu dong!",
-        "Mohon centang persetujuan syarat dan ketentuan ya."
+        "Mohon centang persetujuan syarat dan ketentuan ya.",
       );
       return;
     }
@@ -329,4 +329,4 @@ export const RobuxPreorderFormPage = () => {
       />
     </div>
   );
-};
+}

@@ -1,9 +1,9 @@
 // Robux Page - Displays available Robux types
 
-import { RobuxTypeCard } from "../components/robux/RobuxTypeCard";
-import { HelpSection } from "../components/robux/HelpSection";
-import { FAQSection } from "../components/home/FAQSection";
 import { HeaderTitle } from "../components/common/HeaderTitle";
+import { FAQSection } from "../components/home/FAQSection";
+import { HelpSection } from "../components/robux/HelpSection";
+import { RobuxTypeCard } from "../components/robux/RobuxTypeCard";
 
 // Dummy data for FAQ
 const dummyFAQs = [
@@ -39,7 +39,7 @@ const dummyFAQs = [
   },
 ];
 
-export const RobuxPage = () => {
+export default function RobuxPage() {
   const robuxTypes = [
     {
       badge: "Rekomendasi Termurah",
@@ -135,4 +135,4 @@ export const RobuxPage = () => {
       <FAQSection faqs={dummyFAQs} />
     </>
   );
-};
+}

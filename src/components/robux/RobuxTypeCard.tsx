@@ -1,8 +1,8 @@
 // RobuxTypeCard Component - Card untuk setiap tipe Robux
 
+import { Link } from "react-router";
 import { BadgeLabel } from "../common/BadgeLabel";
 import { ButtonGradient } from "../common/ButtonGradient";
-import { Link } from "react-router-dom";
 
 interface RobuxTypeCardProps {
   badge?: string;
@@ -63,7 +63,7 @@ export const RobuxTypeCard: React.FC<RobuxTypeCardProps> = ({
           }`}
           onError={(e) => {
             e.currentTarget.src = `https://via.placeholder.com/400x160/FFE1E8/FF7797?text=${encodeURIComponent(
-              imageAlt
+              imageAlt,
             )}`;
           }}
         />

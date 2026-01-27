@@ -1,7 +1,7 @@
 // Navbar Component - Matching Laravel Blade version
 
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

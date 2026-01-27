@@ -1,6 +1,6 @@
 // Footer Component - Matching Laravel Blade version (components/footer.blade.php)
 
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 export const Footer = () => {
   const socialMediaLinks = [

@@ -1,11 +1,11 @@
 // Robux Preorder Gamepass Page - Step 3: Buat Gamepass
 
-import { Link } from "react-router-dom";
-import { StepperProgress } from "../components/robux/StepperProgress";
+import { useEffect, useState } from "react";
+import { Link } from "react-router";
 import { ButtonGradient } from "../components/common/ButtonGradient";
-import { useState, useEffect } from "react";
+import { StepperProgress } from "../components/robux/StepperProgress";
 
-export const RobuxPreorderGamepassPage = () => {
+export default function RobuxPreorderGamepassPage() {
   const [orderData, setOrderData] = useState({
     usernameRoblox: "TestUser",
     robuxAmount: 50,
@@ -26,7 +26,7 @@ export const RobuxPreorderGamepassPage = () => {
   const pajakRoblox = 30; // 30% tax
   const nominalRobux = orderData.robuxAmount;
   const nominalRobuxWithTax = Math.round(
-    nominalRobux + nominalRobux * (pajakRoblox / 100)
+    nominalRobux + nominalRobux * (pajakRoblox / 100),
   );
 
   // Instruction images mapping - based on database structure
@@ -190,4 +190,4 @@ export const RobuxPreorderGamepassPage = () => {
       </div>
     </div>
   );
-};
+}

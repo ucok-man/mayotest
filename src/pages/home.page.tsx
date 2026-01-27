@@ -1,27 +1,27 @@
 // Home Page - Following SOLID principles
 // Single Responsibility: Orchestrates home page sections
 
-import { HeroSection } from "../components/home/HeroSection";
-import { ProductOfTheDaySection } from "../components/home/ProductOfTheDaySection";
-import { StatisticsSection } from "../components/home/StatisticsSection";
-import { RecentlySoldSection } from "../components/home/RecentlySoldSection";
 import { BestSellerSection } from "../components/home/BestSellerSection";
-import { TestimonialSection } from "../components/home/TestimonialSection";
-import { FAQSection } from "../components/home/FAQSection";
 import { ContactUsSection } from "../components/home/ContactUsSection";
+import { FAQSection } from "../components/home/FAQSection";
+import { HeroSection } from "../components/home/HeroSection";
 import { MayoCastleSection } from "../components/home/MayoCastleSection";
+import { ProductOfTheDaySection } from "../components/home/ProductOfTheDaySection";
+import { RecentlySoldSection } from "../components/home/RecentlySoldSection";
+import { StatisticsSection } from "../components/home/StatisticsSection";
+import { TestimonialSection } from "../components/home/TestimonialSection";
 import {
-  useProducts,
-  useStatistics,
-  useRecentlySold,
-  useTestimonials,
   useFAQs,
+  useProducts,
+  useRecentlySold,
+  useStatistics,
+  useTestimonials,
 } from "../hooks/useData";
 import {
-  ProductRepository,
-  OrderRepository,
-  TestimonialRepository,
   FAQRepository,
+  OrderRepository,
+  ProductRepository,
+  TestimonialRepository,
 } from "../repositories/implementations";
 
 // Dependency Injection - repositories are created once
@@ -232,7 +232,7 @@ const dummyProducts = [
   },
 ];
 
-export const HomePage = () => {
+export default function HomePage() {
   const { products, loading: productsLoading } = useProducts(productRepository);
   const { stats } = useStatistics(orderRepository);
   const { items } = useRecentlySold(orderRepository, 4);
@@ -268,4 +268,4 @@ export const HomePage = () => {
       <MayoCastleSection />
     </div>
   );
-};
+}
