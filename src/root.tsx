@@ -1,22 +1,39 @@
+/* eslint-disable react-refresh/only-export-components */
 import { Outlet } from "react-router";
-
 import type { Route } from "./+types/root";
-
 import RootErrorBoundary from "./components/error-boundary/root.error-boundary";
 import RootLayout from "./components/layouts/root.layout";
 import "./index.css";
 
 export const links: Route.LinksFunction = () => [
-  //   { rel: "preconnect", href: "https://fonts.googleapis.com" },
-  //   {
-  //     rel: "preconnect",
-  //     href: "https://fonts.gstatic.com",
-  //     crossOrigin: "anonymous",
-  //   },
-  //   {
-  //     rel: "stylesheet",
-  //     href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
-  //   },
+  {
+    rel: "preload",
+    href: "/fonts/cherry-bomb-one/CherryBombOne-Regular.woff2",
+    as: "font",
+    type: "font/woff2",
+    crossOrigin: "anonymous",
+  },
+  {
+    rel: "preload",
+    href: "/fonts/chillax/Chillax-Variable.woff2",
+    as: "font",
+    type: "font/woff2",
+    crossOrigin: "anonymous",
+  },
+  {
+    rel: "preload",
+    href: "/fonts/jakarta-plus-sans/PlusJakartaSans-VariableFont_wght.woff2",
+    as: "font",
+    type: "font/woff2",
+    crossOrigin: "anonymous",
+  },
+  {
+    rel: "preload",
+    href: "/fonts/jakarta-plus-sans/PlusJakartaSans-Italic-VariableFont_wght.woff2",
+    as: "font",
+    type: "font/woff2",
+    crossOrigin: "anonymous",
+  },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {

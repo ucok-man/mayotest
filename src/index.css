@@ -1,39 +1,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap");
 
-/* Custom Font: Chillax */
+/* Cherry Bomb One */
 @font-face {
-  font-family: "Chillax";
-  src: url("/fonts/chillax/Chillax-Regular.otf") format("opentype");
+  font-family: "Cherry Bomb One";
+  src: url("/fonts/cherry-bomb-one/CherryBombOne-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
+/* Chillax Variable */
 @font-face {
   font-family: "Chillax";
-  src: url("/fonts/chillax/Chillax-Medium.otf") format("opentype");
-  font-weight: 500;
+  src: url("/fonts/chillax/Chillax-Variable.woff2") format("woff2");
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 
+/* Plus Jakarta Sans Variable */
 @font-face {
-  font-family: "Chillax";
-  src: url("/fonts/chillax/Chillax-Semibold.otf") format("opentype");
-  font-weight: 600;
+  font-family: "Plus Jakarta Sans";
+  src: url("/fonts/jakarta-plus-sans/PlusJakartaSans-VariableFont_wght.woff2")
+    format("woff2");
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 
+/* Plus Jakarta Sans Italic Variable */
 @font-face {
-  font-family: "Chillax";
-  src: url("/fonts/chillax/Chillax-Bold.otf") format("opentype");
-  font-weight: 700;
-  font-style: normal;
+  font-family: "Plus Jakarta Sans";
+  src: url("/fonts/jakarta-plus-sans/PlusJakartaSans-Italic-VariableFont_wght.woff2")
+    format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
   font-display: swap;
 }
 
 @import "tailwindcss";
+
+@theme inline {
+  --font-cherry-bomb: "Cherry Bomb One", cursive;
+  --font-chillax: "Chillax", sans-serif;
+  --font-jakarta: "Plus Jakarta Sans", sans-serif;
+}
 
 @layer utilities {
   .text-cherry-bomb {
