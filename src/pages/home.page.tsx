@@ -1,15 +1,7 @@
 // Home Page - Following SOLID principles
 // Single Responsibility: Orchestrates home page sections
 
-import { BestSellerSection } from "../components/home/BestSellerSection";
-import { ContactUsSection } from "../components/home/ContactUsSection";
-import { FAQSection } from "../components/home/FAQSection";
-import { HeroSection } from "../components/home/HeroSection";
-import { MayoCastleSection } from "../components/home/MayoCastleSection";
-import { ProductOfTheDaySection } from "../components/home/ProductOfTheDaySection";
-import { RecentlySoldSection } from "../components/home/RecentlySoldSection";
-import { StatisticsSection } from "../components/home/StatisticsSection";
-import { TestimonialSection } from "../components/home/TestimonialSection";
+import { Button } from "~/components/common/button";
 import {
   useFAQs,
   useProducts,
@@ -248,12 +240,11 @@ export default function HomePage() {
   const displayProducts = products.length > 0 ? products : dummyProducts;
 
   return (
-    <div className="min-h-screen">
-      <div className="h-screen flex justify-center items-center font-cherry-h1">
-        Lorem ipsum dolor
-      </div>
-
-      <HeroSection />
+    <div className="min-h-screen flex items-center justify-center">
+      <Button size={"desktop-large"} variant={"secondary"}>
+        Top Up Robux
+      </Button>
+      {/* <HeroSection />
 
       <ProductOfTheDaySection />
 
@@ -269,7 +260,7 @@ export default function HomePage() {
 
       <ContactUsSection />
 
-      <MayoCastleSection />
+      <MayoCastleSection /> */}
     </div>
   );
 }

@@ -46,7 +46,7 @@
   --font-jakarta: "Plus Jakarta Sans", sans-serif;
 
   /* Base Colors */
-  --color-primary: #fff1f4;
+  --color-primary: #ff7797;
   --color-primary-40: #ffc2d1;
   --color-primary-20: #fff1f4;
   --color-secondary: #97bdf5;
@@ -92,12 +92,6 @@
     #ff7797 100.68%
   );
 
-  --background-image-gradient-primary-hover: linear-gradient(
-    146.14deg,
-    #ff7797 0%,
-    #ff7797 100%
-  );
-
   --background-image-gradient-secondary: linear-gradient(
     146.14deg,
     #97bdf5 8.01%,
@@ -106,17 +100,23 @@
     #89d5ff 100.68%
   );
 
-  --background-image-gradient-secondary-hover: linear-gradient(
-    146.14deg,
-    #89d5ff 0%,
-    #89d5ff 100%
-  );
+  /* Primary Hover Shadow Colors */
+  --color-primary-hover-shadow-inset-light: #ffffff70;
+  --color-primary-hover-shadow-inset-dark: #ff779738;
+  --color-primary-hover-shadow-outer-dark: #ff779738;
+  --color-primary-hover-shadow-outer-light: #ffffff38;
+
+  /* Secondary Hover Shadow Colors */
+  --color-secondary-hover-shadow-inset-light: #ffffff70;
+  --color-secondary-hover-shadow-inset-dark: #97bdf538;
+  --color-secondary-hover-shadow-outer-dark: #97bdf538;
+  --color-secondary-hover-shadow-outer-light: #ffffff38;
 }
 
 /* ===== CHERRY BOMB HEADINGS ===== */
 
 /* Desktop Headings */
-@utility font-cherry-h1-dekstop {
+@utility font-cherry-h1-desktop {
   @apply font-cherry-bomb font-normal text-[88px] leading-[0.75] tracking-[0.01em];
 }
 
@@ -188,19 +188,19 @@
 /* ===== CHILLAX LINKS ===== */
 
 /* Desktop Links */
-@utility font-chillax-link-xlarge-dekstop {
+@utility font-chillax-link-xlarge-desktop {
   @apply font-chillax font-bold text-[24px] leading-[24px] tracking-[-0.01em];
 }
 
-@utility font-chillax-link-large-dekstop {
+@utility font-chillax-link-large-desktop {
   @apply font-chillax font-semibold text-[18px] leading-[24px] tracking-[-0.01em];
 }
 
-@utility font-chillax-link-normal-dekstop {
+@utility font-chillax-link-normal-desktop {
   @apply font-chillax font-semibold text-[16px] leading-[24px] tracking-[-0.01em];
 }
 
-@utility font-chillax-link-small-dekstop {
+@utility font-chillax-link-small-desktop {
   @apply font-chillax font-semibold text-[14px] leading-[20px] tracking-[-0.01em];
 }
 
@@ -217,7 +217,7 @@
   @apply font-chillax font-semibold text-[12px] leading-[16px] tracking-[-0.01em];
 }
 
-/* ====BORDER GRADIENT==== */
+/* ====BORDER==== */
 @utility border-gradient-primary {
   --border-g: 2px; /* default thickness */
 
@@ -259,7 +259,24 @@
   --border-g: 5px;
 }
 
-@layer utilities {
+/* ====SHADOW==== */
+@utility shadow-primary-hover {
+  box-shadow:
+    12px 12px 24px 0px var(--color-primary-hover-shadow-inset-light) inset,
+    -12px -12px 24px 0px var(--color-primary-hover-shadow-inset-dark) inset,
+    12px 12px 24px 0px var(--color-primary-hover-shadow-outer-dark),
+    -12px -12px 24px 0px var(--color-primary-hover-shadow-outer-light);
+}
+
+@utility shadow-secondary-hover {
+  box-shadow:
+    12px 12px 24px 0px var(--color-secondary-hover-shadow-outer-dark),
+    -12px -12px 24px 0px var(--color-secondary-hover-shadow-outer-light),
+    12px 12px 24px 0px var(--color-secondary-hover-shadow-inset-light) inset,
+    -12px -12px 24px 0px var(--color-secondary-hover-shadow-inset-dark) inset;
+}
+
+/* @layer utilities {
   .text-cherry-bomb {
     font-family: "Cherry Bomb One", cursive;
     background: linear-gradient(
@@ -314,9 +331,9 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
-}
+} */
 
-:root {
+/* :root {
   --primary-color: #f187ab;
   --secondary-color: #f9a2bd;
   --tertiary-color: #fef4f7;
@@ -384,4 +401,4 @@ body {
 
 .read-the-docs {
   color: #888;
-}
+} */
