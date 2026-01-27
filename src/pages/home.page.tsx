@@ -1,7 +1,6 @@
 // Home Page - Following SOLID principles
 // Single Responsibility: Orchestrates home page sections
 
-import { Button } from "~/components/common/button";
 import {
   useFAQs,
   useProducts,
@@ -241,9 +240,6 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <Button size={"desktop-large"} variant={"secondary"}>
-        Top Up Robux
-      </Button>
       {/* <HeroSection />
 
       <ProductOfTheDaySection />

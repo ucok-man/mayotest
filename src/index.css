@@ -39,6 +39,7 @@
 }
 
 @import "tailwindcss";
+@plugin "tailwindcss-animate";
 
 @theme inline {
   --font-cherry-bomb: "Cherry Bomb One", cursive;
@@ -54,6 +55,7 @@
   --color-white: #ffffff;
   --color-dark: #222222;
   --color-border: #e4e4e4;
+  --color-navbar: #e7e7e7;
   --color-text: #4f4f4f;
   --color-text-placeholder: #939393;
 
