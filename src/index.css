@@ -46,6 +46,110 @@
   --font-jakarta: "Plus Jakarta Sans", sans-serif;
 }
 
+/* ===== CHERRY BOMB HEADINGS ===== */
+
+/* Desktop Headings */
+@utility font-cherry-h1-dekstop {
+  @apply font-cherry-bomb font-normal text-[88px] leading-[0.75] tracking-[0.01em];
+}
+
+@utility font-cherry-h2-desktop {
+  @apply font-cherry-bomb font-normal text-[56px] leading-[0.56] tracking-[0.01em];
+}
+
+@utility font-cherry-h3-desktop {
+  @apply font-cherry-bomb font-normal text-[40px] leading-[1.2] tracking-[0.01em];
+}
+
+/* Mobile Headings */
+@utility font-cherry-h1-mobile {
+  @apply font-cherry-bomb font-normal text-[40px] leading-[1.2] tracking-[0];
+}
+
+@utility font-cherry-h2-mobile {
+  @apply font-cherry-bomb font-normal text-[36px] leading-[1.2] tracking-[0.01em];
+}
+
+@utility font-cherry-h3-mobile {
+  @apply font-cherry-bomb font-normal text-[32px] leading-[1.2] tracking-[0.01em];
+}
+
+/* ===== CHILLAX HEADINGS ===== */
+
+/* Desktop Headings */
+@utility font-chillax-h4-desktop {
+  @apply font-chillax font-semibold text-[32px] leading-[1.2] tracking-[0];
+}
+
+@utility font-chillax-h5-desktop {
+  @apply font-chillax font-semibold text-[28px] leading-[32px] tracking-[0.01em];
+}
+
+@utility font-chillax-h6-desktop {
+  @apply font-chillax font-semibold text-[24px] leading-[32px] tracking-[0.01em];
+}
+
+@utility font-chillax-title-desktop {
+  @apply font-chillax font-semibold text-[20px] leading-[26px] tracking-[0.01em];
+}
+
+@utility font-chillax-label-desktop {
+  @apply font-chillax font-bold text-[11px] leading-[1.5] tracking-[0.1em] uppercase;
+}
+
+/* Mobile Headings */
+@utility font-chillax-h4-mobile {
+  @apply font-chillax font-semibold text-[24px] leading-[1.2] tracking-[-0.03em];
+}
+
+@utility font-chillax-h5-mobile {
+  @apply font-chillax font-semibold text-[20px] leading-[1.2] tracking-[0.01em];
+}
+
+@utility font-chillax-h6-mobile {
+  @apply font-chillax font-semibold text-[18px] leading-[1.2] tracking-[0.01em];
+}
+
+@utility font-chillax-title-mobile {
+  @apply font-chillax font-semibold text-[16px] leading-[1.2] tracking-[-0.02em];
+}
+
+@utility font-chillax-label-mobile {
+  @apply font-chillax font-bold text-[11px] leading-[1.1] tracking-[0.1em] uppercase;
+}
+
+/* ===== CHILLAX LINKS ===== */
+
+/* Desktop Links */
+@utility font-chillax-link-xlarge-dekstop {
+  @apply font-chillax font-bold text-[24px] leading-[24px] tracking-[-0.01em];
+}
+
+@utility font-chillax-link-large-dekstop {
+  @apply font-chillax font-semibold text-[18px] leading-[24px] tracking-[-0.01em];
+}
+
+@utility font-chillax-link-normal-dekstop {
+  @apply font-chillax font-semibold text-[16px] leading-[24px] tracking-[-0.01em];
+}
+
+@utility font-chillax-link-small-dekstop {
+  @apply font-chillax font-semibold text-[14px] leading-[20px] tracking-[-0.01em];
+}
+
+/* Mobile Links */
+@utility font-chillax-link-large-mobile {
+  @apply font-chillax font-semibold text-[16px] leading-[18px] tracking-[-0.01em];
+}
+
+@utility font-chillax-link-normal-mobile {
+  @apply font-chillax font-semibold text-[14px] leading-[16px] tracking-[-0.01em];
+}
+
+@utility font-chillax-link-small-mobile {
+  @apply font-chillax font-semibold text-[12px] leading-[16px] tracking-[-0.01em];
+}
+
 @layer utilities {
   .text-cherry-bomb {
     font-family: "Cherry Bomb One", cursive;

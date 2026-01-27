@@ -249,11 +249,8 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
-      <div className="h-screen flex justify-center items-center">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea accusamus
-        sapiente quam voluptatum corrupti ex maiores, provident in. Quisquam
-        quae exercitationem repellat culpa ipsum ex possimus illo rem delectus
-        laudantium!
+      <div className="h-screen flex justify-center items-center font-cherry-h1">
+        Lorem ipsum dolor
       </div>
 
       <HeroSection />
