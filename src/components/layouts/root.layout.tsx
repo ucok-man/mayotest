@@ -1,5 +1,6 @@
 import type { PropsWithChildren } from "react";
 import { Links, Meta, Scripts, ScrollRestoration } from "react-router";
+import Providers from "../common/providers";
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
@@ -12,7 +13,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
         <Links />
       </head>
       <body className="font-jakarta">
-        {children}
+        <Providers>{children}</Providers>
         <ScrollRestoration />
         <Scripts />
       </body>

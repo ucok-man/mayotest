@@ -219,6 +219,34 @@
   @apply font-chillax font-semibold text-[12px] leading-[16px] tracking-[-0.01em];
 }
 
+/* ===== PLUS JAKARTA SANS BODY ===== */
+
+/* Desktop Body */
+@utility font-jakarta-body-large-desktop {
+  @apply font-jakarta font-normal text-[18px] leading-[26px] tracking-[0.01em];
+}
+
+@utility font-jakarta-body-normal-desktop {
+  @apply font-jakarta font-normal text-[16px] leading-[24px] tracking-[0.01em];
+}
+
+@utility font-jakarta-body-small-desktop {
+  @apply font-jakarta font-normal text-[14px] leading-[18px] tracking-[0.01em];
+}
+
+/* Mobile Body */
+@utility font-jakarta-body-large-mobile {
+  @apply font-jakarta font-normal text-[16px] leading-[24px] tracking-[0.01em];
+}
+
+@utility font-jakarta-body-normal-mobile {
+  @apply font-jakarta font-normal text-[14px] leading-[20px] tracking-[0.01em];
+}
+
+@utility font-jakarta-body-small-mobile {
+  @apply font-jakarta font-medium text-[12px] leading-[18px] tracking-[0.01em];
+}
+
 /* ====BORDER==== */
 @utility border-gradient-primary {
   --border-g: 2px; /* default thickness */
@@ -276,6 +304,86 @@
     -12px -12px 24px 0px var(--color-secondary-hover-shadow-outer-light),
     12px 12px 24px 0px var(--color-secondary-hover-shadow-inset-light) inset,
     -12px -12px 24px 0px var(--color-secondary-hover-shadow-inset-dark) inset;
+}
+
+@utility text-outline {
+  background: linear-gradient(
+    146.14deg,
+    #fe86a2 8.01%,
+    #fdb1c3 56.57%,
+    #ff9bb3 74.39%,
+    #ff7797 100.68%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(-2px -2px 0 white) drop-shadow(2px -2px 0 white)
+    drop-shadow(-2px 2px 0 white) drop-shadow(2px 2px 0 white);
+}
+
+/* ====LETTER SPACING==== */
+@utility tracking-n10 {
+  letter-spacing: -0.1em;
+}
+@utility tracking-n9 {
+  letter-spacing: -0.09em;
+}
+@utility tracking-n8 {
+  letter-spacing: -0.08em;
+}
+@utility tracking-n7 {
+  letter-spacing: -0.07em;
+}
+@utility tracking-n6 {
+  letter-spacing: -0.06em;
+}
+@utility tracking-n5 {
+  letter-spacing: -0.05em;
+}
+@utility tracking-n4 {
+  letter-spacing: -0.04em;
+}
+@utility tracking-n3 {
+  letter-spacing: -0.03em;
+}
+@utility tracking-n2 {
+  letter-spacing: -0.02em;
+}
+@utility tracking-n1 {
+  letter-spacing: -0.01em;
+}
+@utility tracking-p0 {
+  letter-spacing: 0;
+}
+@utility tracking-p1 {
+  letter-spacing: 0.01em;
+}
+@utility tracking-p2 {
+  letter-spacing: 0.02em;
+}
+@utility tracking-p3 {
+  letter-spacing: 0.03em;
+}
+@utility tracking-p4 {
+  letter-spacing: 0.04em;
+}
+@utility tracking-p5 {
+  letter-spacing: 0.05em;
+}
+@utility tracking-p6 {
+  letter-spacing: 0.06em;
+}
+@utility tracking-p7 {
+  letter-spacing: 0.07em;
+}
+@utility tracking-p8 {
+  letter-spacing: 0.08em;
+}
+@utility tracking-p9 {
+  letter-spacing: 0.09em;
+}
+@utility tracking-p10 {
+  letter-spacing: 0.1em;
 }
 
 /* @layer utilities {

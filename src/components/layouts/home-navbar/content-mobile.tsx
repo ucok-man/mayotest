@@ -1,3 +1,4 @@
+import { Image } from "@imagekit/react";
 import { XIcon } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router";
@@ -25,7 +26,7 @@ export default function ContentMobile({ className }: Props) {
         <DialogTrigger className="focus-within:outline-0">
           <Icons.burger className="stroke-primary size-6" />
         </DialogTrigger>
-        <DialogContent className="data-[state=open]:animate-in data-[state=open]:slide-in-from-top-full top-[38%] data-[state=closed]:animate-out data-[state=closed]:slide-out-to-top-full duration-200! border-gradient-primary border-g-1 bg-white rounded-3xl">
+        <DialogContent className="data-[state=open]:animate-in data-[state=open]:slide-in-from-top-full top-[30%] data-[state=closed]:animate-out data-[state=closed]:slide-out-to-top-full duration-200! border-gradient-primary border-g-1 bg-white rounded-3xl">
           <div className="py-8 px-6 flex flex-col items-center justify-center gap-8">
             {HOME_NAV_MOBILE_ITEMS.map((item, idx) => (
               <Link
@@ -45,6 +46,20 @@ export default function ContentMobile({ className }: Props) {
       </Dialog>
 
       {/* Logo */}
+      <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+        <Image src="mayoblox/logo-300.png" width={70} height={40} />
+      </div>
+
+      {/* Right Action */}
+      <div className="flex items-center justify-end gap-4">
+        <Link to={"#"}>
+          <Icons.cart className="stroke-primary size-5.5 fill-none" />
+        </Link>
+
+        <div>
+          <Icons.search className="stroke-primary size-5.5 fill-none" />
+        </div>
+      </div>
     </div>
   );
 }

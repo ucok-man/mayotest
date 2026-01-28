@@ -1,6 +1,7 @@
 // Home Page - Following SOLID principles
 // Single Responsibility: Orchestrates home page sections
 
+import HeroSection from "~/components/modules/home/hero-section";
 import {
   useFAQs,
   useProducts,
@@ -239,7 +240,9 @@ export default function HomePage() {
   const displayProducts = products.length > 0 ? products : dummyProducts;
 
   return (
-    <div className="min-h-screen flex items-center justify-center">
+    <div className="min-h-screen">
+      <HeroSection />
+      <div className="h-screen"></div>
       {/* <HeroSection />
 
       <ProductOfTheDaySection />
