@@ -25,7 +25,10 @@ export default function TesmimoniCardList() {
       centeredSlides={true}
     >
       {data.map((item) => (
-        <SwiperSlide key={item.id} className="max-w-[330px]!">
+        <SwiperSlide
+          key={item.id}
+          className="max-w-[330px]! max-[350px]:w-auto!"
+        >
           <TestimoniCard
             id={item.id}
             username={hideUsername(item.username)}

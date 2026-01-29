@@ -17,12 +17,12 @@ export default function TestimoniCard({
   content,
 }: Props) {
   return (
-    <article className="relative rounded-2xl p-4 border-gradient-primary border-g-1 size-full max-w-[330px] max-h-[226px]">
-      <div className="overflow-hidden size-[104px] absolute -right-4 -top-4 rotate-9">
+    <article className="relative rounded-2xl p-4 border-gradient-primary border-g-1 size-full max-w-[330px] max-[320px]:w-[86%] max-[350px]:w-[90%] max-[350px]:mx-auto">
+      <div className="overflow-hidden size-[104px] absolute -right-4 -top-4 rotate-9 shrink-0">
         <Image
           src={icon}
           alt="Mayo Icon"
-          className="object-cover object-center"
+          className="object-cover object-center size-full"
           loading="eager"
         />
       </div>

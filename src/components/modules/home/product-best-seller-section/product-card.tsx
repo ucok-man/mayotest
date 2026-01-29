@@ -29,7 +29,7 @@ export default function ProductCard({
     >
       <div className="flex flex-col items-center justify-center gap-3 px-3 py-4 size-full">
         {/* Image */}
-        <div className="rounded-full overflow-hidden border-gradient-primary border-g-5 size-28 bg-gradient-primary">
+        <div className="rounded-full overflow-hidden border-gradient-primary border-g-5 size-28 max-[360px]:size-24 bg-gradient-primary">
           <img
             src={imgSrc}
             alt={imgAlt}
@@ -46,7 +46,7 @@ export default function ProductCard({
           <div className="w-full h-px bg-primary-40" />
 
           <div className="flex flex-col gap-2">
-            <div className="flex items-center justify-center gap-1 font-chillax-link-small-mobile">
+            <div className="flex items-center justify-center gap-1 font-chillax-link-small-mobile max-[360px]:hidden">
               <span className="text-primary">R$ {robuxAmount}</span>
               <span className="text-primary">.</span>
               <span className="text-dark">{totalSold}x Terjual</span>
@@ -58,10 +58,18 @@ export default function ProductCard({
           </div>
 
           <div className="flex flex-col items-center justify-center gap-1">
-            <Button variant={"primary"} size={"mobile-small"}>
+            <Button
+              variant={"primary"}
+              size={"mobile-small"}
+              className="max-[390px]:text-xs max-[390px]:px-2"
+            >
               Beli Sekarang
             </Button>
-            <Button variant={"secondary"} size={"mobile-small"}>
+            <Button
+              variant={"secondary"}
+              size={"mobile-small"}
+              className="max-[390px]:text-xs max-[390px]:px-2"
+            >
               Keranjang
             </Button>
           </div>
