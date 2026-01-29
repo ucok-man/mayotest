@@ -2,10 +2,10 @@ type Props = {
   imgSrc: string;
   imgAlt: string;
   label: string;
-  robux: string;
+  price: string;
 };
 
-export default function ProductCard({ imgSrc, imgAlt, label, robux }: Props) {
+export default function ProductCard({ imgSrc, imgAlt, label, price }: Props) {
   return (
     <article className="border-2 border-border rounded-full w-full max-w-55 h-full">
       <div className="flex items-center justify-start gap-3 px-2.5 py-2 size-full">
@@ -23,7 +23,7 @@ export default function ProductCard({ imgSrc, imgAlt, label, robux }: Props) {
           <h5 className="font-chillax-link-small-mobile text-text line-clamp-1">
             {label}
           </h5>
-          <p className="font-chillax-link-large-mobile text-primary">{robux}</p>
+          <p className="font-chillax-link-large-mobile text-primary">{price}</p>
         </div>
       </div>
     </article>

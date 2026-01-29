@@ -7,7 +7,13 @@ export function useProductRecommendation(repo: IProductRepository) {
     queryKey: [QueryKeys.ProductRecommendation],
     queryFn: async () => {
       const items = await repo.getRecommendation();
-      return items;
+      return items.map((item) => ({
+        id: item.id,
+        imgSrc: item.image,
+        imgAlt: item.name,
+        label: item.name,
+        price: item.price,
+      }));
     },
   });
 

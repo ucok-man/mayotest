@@ -1,16 +1,15 @@
-import type {
-  IProductRepository,
-  ProductRecommendationItem,
-} from "./interfaces";
+import type { Product } from "~/types/domain";
+import type { IProductRepository } from "./interfaces";
 
 export class ProductRepository implements IProductRepository {
-  async getRecommendation(): Promise<ProductRecommendationItem[]> {
-    const items = Array.from({ length: 10 }, (_, i) => ({
-      id: i + 1,
-      imgSrc: "/assets/placeholder/search-and-rescue.png",
-      imgAlt: "Search And Rescue",
-      label: "Search & Rescue",
-      robux: "R$ 850",
+  async getRecommendation(): Promise<Product[]> {
+    const items: Product[] = Array.from({ length: 10 }, (_, i) => ({
+      id: `${i + 1}`,
+      image: "/assets/placeholder/search-and-rescue.png",
+      name: "Search & Rescue",
+      price: 850,
+      category: "",
+      description: "",
     }));
 
     return Promise.resolve(items);

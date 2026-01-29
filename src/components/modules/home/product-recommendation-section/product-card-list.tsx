@@ -31,7 +31,7 @@ export default function ProductCardList() {
             imgSrc={item.imgSrc}
             imgAlt={item.imgAlt}
             label={item.label}
-            robux={item.robux}
+            price={`R$ ${item.price}`}
           />
         </SwiperSlide>
       ))}

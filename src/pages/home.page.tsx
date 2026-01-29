@@ -1,6 +1,7 @@
 // Home Page - Following SOLID principles
 // Single Responsibility: Orchestrates home page sections
 
+import AboutSection from "~/components/modules/home/about-section";
 import HeroSection from "~/components/modules/home/hero-section";
 import ProductRecommendationSection from "~/components/modules/home/product-recommendation-section";
 
@@ -231,6 +232,7 @@ export default function HomePage() {
     <div className="min-h-screen space-y-26">
       <HeroSection />
       <ProductRecommendationSection />
+      <AboutSection />
       {/* <HeroSection />
 
       <ProductOfTheDaySection />

@@ -53,3 +53,7 @@ const twMerge = extendTailwindMerge<"border-width">({
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
+
+export function formatCurrency(num: number): string {
+  return num.toLocaleString("id-ID");
+}

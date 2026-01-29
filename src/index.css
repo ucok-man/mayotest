@@ -57,6 +57,7 @@
   --color-border: #e4e4e4;
   --color-navbar: #e7e7e7;
   --color-text: #4f4f4f;
+  --color-text-10: #606060;
   --color-text-placeholder: #939393;
 
   /* Gradient Colors */
@@ -308,16 +309,6 @@
 
 /* ====TEXT COLOR==== */
 @utility text-outline {
-  background: linear-gradient(
-    146.14deg,
-    #fe86a2 8.01%,
-    #fdb1c3 56.57%,
-    #ff9bb3 74.39%,
-    #ff7797 100.68%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   filter: drop-shadow(-2px -2px 0 white) drop-shadow(2px -2px 0 white)
     drop-shadow(-2px 2px 0 white) drop-shadow(2px 2px 0 white);
 }
