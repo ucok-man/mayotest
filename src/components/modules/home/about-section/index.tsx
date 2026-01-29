@@ -73,7 +73,7 @@ export default function AboutSection() {
                   Robux Terjual di Mayoblox
                 </h6>
                 <p className="font-cherry-h3-mobile text-primary text-outline">
-                  {formatCurrency(data.totalRobuxSold)} R$
+                  {formatCurrency(data.amountRobuxSold)} R$
                 </p>
               </div>
             </div>
@@ -83,7 +83,7 @@ export default function AboutSection() {
           <article className="relative overflow-hidden size-full max-w-[360px] max-h-[132px] rounded-2xl p-6 bg-tertiary-20">
             <div className="flex flex-col items-center justify-center gap-3 w-full">
               <h6 className="font-cherry-h1-mobile text-gradient-primary text-outline">
-                {formatCurrency(data.totalOrders)}
+                {formatCurrency(data.amountOfOrder)}
               </h6>
               <p className="font-chillax-h5-mobile text-primary text-center">
                 Total Order SobatMayo

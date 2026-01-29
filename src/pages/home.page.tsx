@@ -3,6 +3,7 @@
 
 import AboutSection from "~/components/modules/home/about-section";
 import HeroSection from "~/components/modules/home/hero-section";
+import ProductNewestSoldSection from "~/components/modules/home/product-newest-sold-section";
 import ProductRecommendationSection from "~/components/modules/home/product-recommendation-section";
 
 // // Dependency Injection - repositories are created once
@@ -233,6 +234,7 @@ export default function HomePage() {
       <HeroSection />
       <ProductRecommendationSection />
       <AboutSection />
+      <ProductNewestSoldSection />
       {/* <HeroSection />
 
       <ProductOfTheDaySection />

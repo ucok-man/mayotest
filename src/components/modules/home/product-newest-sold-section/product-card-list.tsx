@@ -1,14 +1,12 @@
 import { Mousewheel, Scrollbar } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useProductRecommendation } from "~/hooks/use-product-recommendation";
+import { useProductNewestSold } from "~/hooks/use-product-newest-sold";
 import { formatCurrency } from "~/lib/utils";
 import { repository } from "~/repositories";
 import ProductCard from "./product-card";
 
 export default function ProductCardList() {
-  const { data, error, isPending } = useProductRecommendation(
-    repository.product,
-  );
+  const { data, error, isPending } = useProductNewestSold(repository.order);
 
   // TODO: handle this
   if (isPending) return null;
@@ -27,12 +25,12 @@ export default function ProductCardList() {
       centeredSlides={true}
     >
       {data.map((item) => (
-        <SwiperSlide key={item.id} className="w-[220px]!">
+        <SwiperSlide key={item.id} className="w-[240px]!">
           <ProductCard
             imgSrc={item.imgSrc}
             imgAlt={item.imgAlt}
-            name={item.name}
-            robuxAmount={`R$ ${formatCurrency(item.robuxAmount)}`}
+            priceIdr={formatCurrency(item.priceIdr)}
+            robuxAmount={formatCurrency(item.robuxAmount)}
           />
         </SwiperSlide>
       ))}

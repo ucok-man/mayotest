@@ -1,4 +1,4 @@
-import { OrderRepository } from "./implementations";
+import { OrderRepository } from "./order.implementation";
 import { ProductRepository } from "./product.implementation";
 
 export const repository = {
