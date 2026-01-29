@@ -5,7 +5,7 @@ import FaqAccordionList from "./faq-accordion-list";
 export default function FAQSection() {
   return (
     <section>
-      <MaxWidthWrapper className="space-y-8">
+      <MaxWidthWrapper className="space-y-5">
         <header className="flex flex-col items-start justify-center gap-3">
           <Badge>Frequently Ask Question (FAQ)</Badge>
           <h3 className="font-cherry-h3-mobile text-gradient-primary text-left">

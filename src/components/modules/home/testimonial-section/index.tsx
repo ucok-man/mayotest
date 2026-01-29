@@ -7,7 +7,7 @@ import TestimoniCardList from "./testimoni-card-list";
 export default function TestimonialSection() {
   return (
     <section className="space-y-8 overflow-hidden">
-      <MaxWidthWrapper className="space-y-6">
+      <MaxWidthWrapper className="space-y-6 pb-3">
         <header className="flex flex-col items-center justify-center gap-3">
           <Badge>Testimoni Sobatmayo</Badge>
           <h3 className="font-cherry-h3-mobile text-gradient-primary text-center">
