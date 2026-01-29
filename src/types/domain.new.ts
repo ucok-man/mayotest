@@ -48,3 +48,12 @@ export type RecentlySold = {
   };
   order: Order;
 };
+
+export type Testimoni = {
+  id: number | string;
+  image: string;
+  icon: string;
+  username: string;
+  city: string;
+  content: string;
+};

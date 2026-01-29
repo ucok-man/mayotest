@@ -1,7 +1,12 @@
 // // Repository Interfaces - Following SOLID: Interface Segregation Principle
 // // Clients should not be forced to depend on interfaces they don't use
 
-import type { OrderStatistic, Product, RecentlySold } from "~/types/domain.new";
+import type {
+  OrderStatistic,
+  Product,
+  RecentlySold,
+  Testimoni,
+} from "~/types/domain.new";
 
 // import type {
 //     Product,
@@ -47,4 +52,8 @@ export interface IProductRepository {
 export interface IOrderRepository {
   getStatistics(): Promise<OrderStatistic>;
   getNewestSold(): Promise<RecentlySold[]>;
+}
+
+export interface ITestimoniRepository {
+  getAll(): Promise<Testimoni[]>;
 }

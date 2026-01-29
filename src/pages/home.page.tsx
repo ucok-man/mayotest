@@ -6,6 +6,7 @@ import HeroSection from "~/components/modules/home/hero-section";
 import ProductBestSellerSection from "~/components/modules/home/product-best-seller-section";
 import ProductNewestSoldSection from "~/components/modules/home/product-newest-sold-section";
 import ProductRecommendationSection from "~/components/modules/home/product-recommendation-section";
+import TestimonialSection from "~/components/modules/home/testimonial-section";
 
 // // Dependency Injection - repositories are created once
 // const productRepository = new ProductRepository();
@@ -237,6 +238,7 @@ export default function HomePage() {
       <AboutSection />
       <ProductNewestSoldSection />
       <ProductBestSellerSection />
+      <TestimonialSection />
       {/* <HeroSection />
 
       <ProductOfTheDaySection />

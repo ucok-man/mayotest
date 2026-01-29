@@ -67,10 +67,12 @@ function Button({
   variant = "primary",
   size = "desktop-normal",
   asChild = false,
+  contentClass,
   ...props
 }: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean;
+    contentClass?: string;
   }) {
   const Comp = asChild ? Slot : "button";
 
@@ -89,7 +91,7 @@ function Button({
       <div className={bgHoverVariants({ variant })} />
 
       {/* Content needs to be above overlays */}
-      <span className="relative z-10">{props.children}</span>
+      <div className={cn("relative z-10", contentClass)}>{props.children}</div>
     </Comp>
   );
 }
