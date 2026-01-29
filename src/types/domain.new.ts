@@ -16,6 +16,7 @@ export type ProductTypeItem = {
   type: "item";
   name: string;
   image: string;
+  totalSold: number;
 } & ProductBase;
 
 export type Product =

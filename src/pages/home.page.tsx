@@ -3,6 +3,7 @@
 
 import AboutSection from "~/components/modules/home/about-section";
 import HeroSection from "~/components/modules/home/hero-section";
+import ProductBestSellerSection from "~/components/modules/home/product-best-seller-section";
 import ProductNewestSoldSection from "~/components/modules/home/product-newest-sold-section";
 import ProductRecommendationSection from "~/components/modules/home/product-recommendation-section";
 
@@ -235,6 +236,7 @@ export default function HomePage() {
       <ProductRecommendationSection />
       <AboutSection />
       <ProductNewestSoldSection />
+      <ProductBestSellerSection />
       {/* <HeroSection />
 
       <ProductOfTheDaySection />

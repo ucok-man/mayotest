@@ -41,6 +41,7 @@ import type { OrderStatistic, Product, RecentlySold } from "~/types/domain.new";
 
 export interface IProductRepository {
   getRecommendation(): Promise<Product[]>;
+  getBestSeller(): Promise<Product[]>;
 }
 
 export interface IOrderRepository {
