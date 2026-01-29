@@ -2,6 +2,7 @@
 // // Clients should not be forced to depend on interfaces they don't use
 
 import type {
+  Faq,
   OrderStatistic,
   Product,
   RecentlySold,
@@ -56,4 +57,8 @@ export interface IOrderRepository {
 
 export interface ITestimoniRepository {
   getAll(): Promise<Testimoni[]>;
+}
+
+export interface IFAQRepository {
+  getAll(): Promise<Faq[]>;
 }

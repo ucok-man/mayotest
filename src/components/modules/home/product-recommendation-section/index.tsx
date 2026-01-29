@@ -4,7 +4,7 @@ import ProductCardList from "./product-card-list";
 
 export default function ProductRecommendationSection() {
   return (
-    <section className="space-y-6">
+    <section className="space-y-8">
       <MaxWidthWrapper>
         <header className="flex flex-col items-center justify-center gap-3">
           <Badge>Rekomendasi Produk</Badge>

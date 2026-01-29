@@ -2,6 +2,7 @@
 // Single Responsibility: Orchestrates home page sections
 
 import AboutSection from "~/components/modules/home/about-section";
+import FAQSection from "~/components/modules/home/faq-section";
 import HeroSection from "~/components/modules/home/hero-section";
 import ProductBestSellerSection from "~/components/modules/home/product-best-seller-section";
 import ProductNewestSoldSection from "~/components/modules/home/product-newest-sold-section";
@@ -239,6 +240,7 @@ export default function HomePage() {
       <ProductNewestSoldSection />
       <ProductBestSellerSection />
       <TestimonialSection />
+      <FAQSection />
       {/* <HeroSection />
 
       <ProductOfTheDaySection />

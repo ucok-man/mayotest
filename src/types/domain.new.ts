@@ -57,3 +57,17 @@ export type Testimoni = {
   city: string;
   content: string;
 };
+
+export type Faq = {
+  id: string;
+  question: string;
+  displayOrder: number;
+  answers: FaqAnswer[];
+};
+
+export type FaqAnswer = {
+  id: string;
+  short: string;
+  long: string;
+  displayOrder: number;
+};

@@ -5,7 +5,7 @@ import ProductCardList from "./product-card-list";
 
 export default function ProductNewestSoldSection() {
   return (
-    <section className="space-y-6">
+    <section className="space-y-8">
       <MaxWidthWrapper>
         <header className="flex flex-col items-center justify-center gap-3">
           <Badge>Item Terjual</Badge>
