@@ -8,13 +8,13 @@ type Props = {
 
 export default function FeatureCard({ children, className }: Props) {
   return (
-    <div
+    <article
       className={cn(
         "border-gradient-primary border-g-2 rounded-2xl bg-primary-20",
         className,
       )}
     >
       {children}
-    </div>
+    </article>
   );
 }

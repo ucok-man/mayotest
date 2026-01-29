@@ -306,6 +306,7 @@
     -12px -12px 24px 0px var(--color-secondary-hover-shadow-inset-dark) inset;
 }
 
+/* ====TEXT COLOR==== */
 @utility text-outline {
   background: linear-gradient(
     146.14deg,
@@ -319,6 +320,19 @@
   background-clip: text;
   filter: drop-shadow(-2px -2px 0 white) drop-shadow(2px -2px 0 white)
     drop-shadow(-2px 2px 0 white) drop-shadow(2px 2px 0 white);
+}
+
+@utility text-gradient-primary {
+  background: linear-gradient(
+    146.14deg,
+    #fe86a2 8.01%,
+    #fdb1c3 56.57%,
+    #ff9bb3 74.39%,
+    #ff7797 100.68%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* ====LETTER SPACING==== */

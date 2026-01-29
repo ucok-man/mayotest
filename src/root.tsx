@@ -1,5 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import { Outlet } from "react-router";
+import "swiper/css/bundle";
 import type { Route } from "./+types/root";
 import RootErrorBoundary from "./components/error-boundary/root.error-boundary";
 import RootLayout from "./components/layouts/root.layout";
