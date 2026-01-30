@@ -18,7 +18,7 @@ export default function FAQSection() {
           <FaqAccordionList />
         </div>
 
-        <div className="w-[654px] h-[660px] rounded-[32px] overflow-hidden shrink-0">
+        <div className="hidden sm:block w-[654px] h-[660px] rounded-[32px] overflow-hidden shrink-0">
           <Image
             src="mayoblox/mayo-real-gift.png"
             alt="Mayo Gift"

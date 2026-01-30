@@ -10,7 +10,7 @@ export default function ProductNewestSoldSection() {
       <MaxWidthWrapper className="w-full sm:flex sm:items-center sm:justify-between">
         <div className="flex items-center">
           {/* Icon */}
-          <div className="w-[249px] h-[269px]">
+          <div className="hidden sm:block sm:w-[249px] sm:h-[269px]">
             <Image
               src="mayoblox/mayo-metal.png"
               alt="Mayo Metal"
@@ -30,7 +30,7 @@ export default function ProductNewestSoldSection() {
           </header>
         </div>
 
-        <Button size={"desktop-normal"} className="w-fit">
+        <Button size={"desktop-normal"} className="hidden sm:block sm:w-fit">
           Selengkapnya
         </Button>
       </MaxWidthWrapper>

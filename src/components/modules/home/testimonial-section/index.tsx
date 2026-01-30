@@ -27,7 +27,7 @@ export default function TestimonialSection() {
         />
       </div>
 
-      <MaxWidthWrapper className="space-y-6 pb-3 mb-44 relative z-10">
+      <MaxWidthWrapper className="space-y-6 pb-3 mb-9 sm:mb-44 relative z-10">
         <header className="flex flex-col items-center justify-center gap-3">
           <Badge>Testimoni Sobatmayo</Badge>
           <h3 className="font-cherry-h3-mobile text-gradient-primary text-center sm:font-cherry-h3-desktop">
