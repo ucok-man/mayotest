@@ -1,9 +1,11 @@
+import { useMediaQuery } from "usehooks-ts";
 import { useProductBestSeller } from "~/hooks/use-product-bestseller";
 import { cn, formatCurrency } from "~/lib/utils";
 import { repository } from "~/repositories";
 import ProductCard from "./product-card";
 
 export default function ProductCardList() {
+  const isSm = useMediaQuery("(max-width: 640px)");
   const { data, error, isPending } = useProductBestSeller(repository.product);
 
   // TODO: handle this
@@ -11,7 +13,7 @@ export default function ProductCardList() {
   if (error) return null;
 
   return (
-    <div className="w-full grid grid-cols-2 place-items-center gap-4">
+    <div className="w-full grid grid-cols-2 place-items-center gap-4 sm:flex">
       {data.map((item, idx) => (
         <ProductCard
           key={item.id}
@@ -21,7 +23,7 @@ export default function ProductCardList() {
           priceIdr={formatCurrency(item.priceIdr)}
           robuxAmount={formatCurrency(item.robuxAmount)}
           totalSold={`${item.totalSold}`}
-          className={cn("", idx >= 4 && "hidden")}
+          className={cn("", isSm && idx >= 4 && "hidden")}
         />
       ))}
     </div>

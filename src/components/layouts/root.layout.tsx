@@ -12,7 +12,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
         <Meta />
         <Links />
       </head>
-      <body className="font-jakarta">
+      <body className="font-jakarta max-w-[1512px] mx-auto">
         <Providers>{children}</Providers>
         <ScrollRestoration />
         <Scripts />

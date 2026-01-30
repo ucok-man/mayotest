@@ -25,7 +25,7 @@ export default function ProductCardList() {
       centeredSlides={true}
     >
       {data.map((item) => (
-        <SwiperSlide key={item.id} className="w-[240px]!">
+        <SwiperSlide key={item.id} className="w-[240px]! sm:w-[302px]!">
           <ProductCard
             imgSrc={item.imgSrc}
             imgAlt={item.imgAlt}

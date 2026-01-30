@@ -5,7 +5,7 @@ import * as React from "react";
 import { cn } from "~/lib/utils";
 
 const buttonVariants = cva(
-  "relative inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold font-chillax transition-all duration-300 size-full disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none text-white",
+  "group relative inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold font-chillax transition-all duration-200 size-full disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none text-white",
   {
     variants: {
       variant: {
@@ -16,7 +16,7 @@ const buttonVariants = cva(
         "desktop-large":
           "font-chillax-h6-desktop max-w-[402px] max-h-[84px] py-[30px] px-[32px]",
         "desktop-normal":
-          "font-chillax-title-desktop max-[312px] max-h-[72px] py-[24px] px-[32px]",
+          "font-chillax-title-desktop max-w-[312px] max-h-[72px] py-[24px] px-[32px]",
         "desktop-small":
           "font-chillax-link-normal-desktop max-w-[191px] max-h-[52px] py-[14px] px-[32px]",
         "desktop-icon": "w-[52px] h-[52px] p-[12px]",
@@ -38,25 +38,24 @@ const buttonVariants = cva(
 
 // Create separate CVA for overlay styles
 const bgBaseVariants = cva(
-  "absolute inset-0 rounded-full transition-opacity duration-300 opacity-100 hover:opacity-0",
+  "absolute inset-0 rounded-full transition-opacity duration-200 group-hover:opacity-0",
   {
     variants: {
       variant: {
-        primary: "bg-gradient-primary hover:opacity-0 opacity-100",
-        secondary: "bg-gradient-secondary hover:opacity-0 opacity-100",
+        primary: "bg-gradient-primary",
+        secondary: "bg-gradient-secondary",
       },
     },
   },
 );
 
 const bgHoverVariants = cva(
-  "absolute inset-0 rounded-full opacity-0 hover:opacity-100 transition-opacity duration-300",
+  "absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200",
   {
     variants: {
       variant: {
-        primary: "bg-primary shadow-primary-hover hover:opacity-100 opacity-0",
-        secondary:
-          "bg-secondary shadow-secondary-hover hover:opacity-100 opacity-0",
+        primary: "bg-primary shadow-primary-hover",
+        secondary: "bg-secondary shadow-secondary-hover",
       },
     },
   },

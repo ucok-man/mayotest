@@ -8,7 +8,7 @@ export default function ProductRecommendationSection() {
       <MaxWidthWrapper>
         <header className="flex flex-col items-center justify-center gap-3">
           <Badge>Rekomendasi Produk</Badge>
-          <h3 className="font-cherry-h3-mobile text-gradient-primary text-center">
+          <h3 className="font-cherry-h3-mobile text-gradient-primary text-center sm:font-cherry-h3-desktop">
             Product Of The Day
           </h3>
         </header>

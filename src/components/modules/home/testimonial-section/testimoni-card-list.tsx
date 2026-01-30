@@ -27,7 +27,7 @@ export default function TesmimoniCardList() {
       {data.map((item) => (
         <SwiperSlide
           key={item.id}
-          className="max-w-[330px]! max-[350px]:w-auto!"
+          className="max-w-[330px]! max-[350px]:w-auto! sm:max-w-[514px]!"
         >
           <TestimoniCard
             id={item.id}

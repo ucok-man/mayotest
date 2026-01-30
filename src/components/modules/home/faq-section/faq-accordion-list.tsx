@@ -22,18 +22,22 @@ export default function FaqAccordionList() {
     <Accordion collapsible type="single" defaultValue="0">
       {faqs.map((item, idx) => (
         <AccordionItem key={idx} value={`${idx}`}>
-          <AccordionTrigger>{item.question}</AccordionTrigger>
+          <AccordionTrigger className="font-chillax-link-normal-mobile sm:font-chillax-link-normal-desktop">
+            {item.question}
+          </AccordionTrigger>
 
           <AccordionContent className="flex flex-col gap-6">
             {item.answers.map(({ short, long }, idx) => (
               <div key={idx} className="flex gap-2">
-                <div className="font-chillax-link-normal-mobile">
+                <div className="font-chillax-link-normal-mobile sm:font-chillax-link-normal-desktop">
                   {idx + 1}.
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <p className="font-chillax-link-normal-mobile">{short}</p>
-                  <p className="font-jakarta-body-normal-mobile text-text">
+                  <p className="font-chillax-link-normal-mobile sm:font-chillax-link-normal-desktop">
+                    {short}
+                  </p>
+                  <p className="font-jakarta-body-normal-mobile text-text sm:font-jakarta-body-normal-desktop">
                     {long}
                   </p>
                 </div>
